@@ -1,7 +1,13 @@
+@use 'config/variaveis';
+@use 'config/reset';
 
 
 body {
-    background-color: variaveis.$CorDeFundo;
+    background-color: variaveis.$corDeFundo;
+}
+
+li {
+    list-style: none;
 }
 
 .container {
@@ -11,7 +17,7 @@ body {
 }
 
 header {
-    background-color: variaveis.$CorHeader;
+    background-color: variaveis.$corHeader;
     position: sticky;
     top: 0;
     left: 0;
@@ -34,7 +40,7 @@ header .container {
 }
 
 .menu li a {
-    color: variaveis.$CorBranco;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -58,17 +64,17 @@ section {
 
 .product-button {
     display: block;
-    background-color: variaveis.$CorButton;
-    color: variaveis.$CorBranco;
+    background-color: variaveis.$corButton;
+    color: #fff;
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
     margin-top: 8px;
     text-decoration: none;
+}
 
-    &:hover {
-        background-color: lighten(variaveis.$CorButton, 15%);
-    }
+.product-button:hover {
+    background-color: variaveis.$hoverButton;
 }
 
 @media screen and (max-width: 1023px) {
